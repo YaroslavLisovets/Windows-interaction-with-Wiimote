@@ -1,0 +1,20 @@
+[package]
+name = "Wiimote"
+version = "0.1.0"
+edition = "2021"
+#build = "build.rs"
+#rustc-link-search = ["C:/Dev/Institute/C++/WiimoteHandler/cmake-build-release/"]
+#rustc-link-lib = ["WiimoteHid"]
+
+[lib]
+name = "wiimotelib"
+path = "src/lib.rs"
+
+
+[dependencies]
+gdnative = "0.10.0"
+libc = "0.2.123"
+[build-dependencies]
+cc = {version = "1.0.73", features = ["parallel"]}
+pkg-config = "0.3.25"
+

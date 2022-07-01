@@ -1,0 +1,81 @@
+\documentclass{report}
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[labelsep=space]{caption} [2022/02/20]
+\usepackage{ltablex,booktabs}
+\usepackage[english,russian]{babel}
+\usepackage{fontspec}
+\usepackage{indentfirst}
+\usepackage{minted}
+\setmainfont{Times New Roman}
+\usepackage{enotez}
+\setenotez{backref = true,list-heading ={\section{#1}} }
+\DeclareTranslation{russian}{enotez-title}{Список литературы}
+\usepackage{ulem}
+\usepackage{listings, listings-rust}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage[document]{ragged2e}
+\usepackage{longtable}
+\usepackage{layout}
+\usepackage[right=1.0in, left=1.0in, top=121pt, bottom=1.0in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{capt-of}
+%\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\pagestyle{fancy}
+\renewcommand{\baselinestretch}{1}
+\fancypagestyle{plain}{%
+    \fancyhf{} % clear all header and footer fields
+    \fancyhead{} % clear all header fields
+    \fancyfoot{} % clear all footer fields
+    \fancyhead[C0]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{}
+%\makeatletter
+%\Hy@AtBeginDocument{%
+%    \def\@pdfborder{0 0 0}% Overrides border definition set with colorlinks=true
+%    \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set with colorlinks=true
+%% Hyperlink border style will be underline of width 1pt
+%}
+%\makeatother
+\usepackage{hyperref}
+\hypersetup{
+%    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    colorlinks=false,% hyperlinks will be black
+    linkbordercolor=white,% hyperlink borders will be red
+    pdfborderstyle={/S/U/W 1},
+    urlbordercolor = 1 1 1
+}
+
+
+
+\renewcommand\thesection{\arabic{section}}
+\title{\MakeUppercase{Курсовая работа} \\
+по дисциплине «Операционные системы»}
+\author{Лисовец Ярослав Васильевич}
+\date{2022}
+\newcommand\teacher{Доцент Черкасова Н.И.}
+\newcommand\theme{Взаимодействие с операционной системой \\с помощью внешних устройств}
+
+\input{Titlepage.tex}
+
+\begin{document}
+    \maketitle
+    \newgeometry{top=1in}
+    \input{Contents.tex}
+    \input{Content.tex}
+
+
+\end{document}

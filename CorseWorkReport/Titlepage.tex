@@ -1,0 +1,63 @@
+\makeatletter
+\renewcommand\maketitle{
+    \thispagestyle{plain}
+    \large
+    \noindent\begin{minipage}{1.21in}% adapt widths of minipages to your needs
+                 \begin{center}
+                     \includegraphics[width=1.21in]{content/logo}
+                 \end{center}
+    \end{minipage}%
+
+    \hfill%
+    \begin{minipage}{0.9\textwidth}\raggedleft
+    \begin{center}
+        \textbf{ФЕДЕРАЛЬНОЕ АГЕНТСТВО ВОЗДУШНОГО ТРАНСПОРТА}\\
+        \hfill \break
+        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ПРОЙЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ\newline
+        «МОСКОВСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ ГРАЖДАНСКОЙ АВИАЦИИ» (МГТУ ГА)\\
+        \hfill \break
+        Кафедра вычислительных машин, комплексов, сетей и систем.
+
+    \end{center}
+    \end{minipage}
+    \begin{minipage}{\textwidth}
+        \centering
+        \hfill \break
+        \hfill \break
+        \hfill \break
+
+        \@title\\
+        Тема: \guillemotleft\theme \guillemotright
+
+    \end{minipage}
+
+
+    \thispagestyle{empty}
+
+    \mbox{}
+    \vfill
+    \raggedleft
+    Выполнил студент\\
+    2 курса\\
+    факультета ПМиВТ\\
+    группы ЭВМ 2--1\\
+    \@author\\
+    Преподаватель: \teacher\\
+    \centering
+    \hfill \break
+    \hfill \break
+    \hfill \break
+    \@date
+
+%\thispagestyle{empty}
+%\flushbottom
+%\marg
+    \newpage
+    \clearpage
+    \setcounter{page}{1}
+    \setcounter{section}{0}
+    \normalsize
+
+
+}
+\makeatother

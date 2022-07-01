@@ -1,0 +1,62 @@
+
+\let\footnote=\endnote
+\renewcommand{\figurename}{Рисунок -}
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+\raggedright
+    \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+    \else
+    \csname the#1\endcsname\quad
+    \fi}
+% define \prefix@section
+\newcommand\prefix@section{ }
+\makeatother
+
+
+\include{sections/annotation}
+
+\include{sections/specification}
+
+\include{sections/theoretical_information}
+
+\include{sections/project_creation}
+
+\include{sections/manual}
+
+
+
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{white!5}, % set backgroundcolor
+    basicstyle=\footnotesize,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{black}{$\hookrightarrow$}\space},
+    showstringspaces=false,
+    extendedchars=\true
+}
+
+\edef\@currentlabel{Список литературы}
+\renewcommand{\footnotesize}{\fontsize{9pt}{11pt}\selectfont}
+\raggedright
+
+
+\printendnotes
+\newpage
+\newgeometry{right = 0.5in, left=0.5in, top=1in, bottom=0.5in}
+\lstset{basicstyle=\footnotesize, columns=fullflexible}
+\section{Приложение 1. Исходный тексты программы}
+\subsection{WiimoteHid.hpp}
+\lstinputlisting{..//WiimoteHandler/WiimoteHid.hpp}
+\subsection{WiimoteHid.cpp}
+\lstinputlisting{../WiimoteHandler/WiimoteHid.cpp}
+\lstset { language=Rust}
+\lstdefinelanguage{Rust}{morestring=[b]"}
+\subsection{main.rs}
+\lstinputlisting{../Wiimote/src/main.rs}
+\subsection{lib.rs}
+\lstinputlisting{../Wiimote/src/lib.rs}
+\section{Приложение 2. Алгоритмы функций }
+\includegraphics[width=\textwidth]{content/Algorithm}
+\caption{Алгоритмы функций wiimote::read и ProcessWiimotes}
