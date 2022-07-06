@@ -1,6 +1,6 @@
 # Course Work Second Year 2021-2022 Windows interaction with Wiimote.
 
-# English
+# Description 
 
 * WiimoteHandler contains C++ code that establishes a connection with Bluetooth and then reads and writes data with HID(Human Interface Device). During the compilation, a static library is generated.
 
@@ -13,7 +13,7 @@
 
   *The maximum score was received for this work.The maximum score was received for this work.*
 
-# Русский
+# Описание
 
 * WiimoteHandler содержит код C++, который устанавливает соединение с Bluetooth, а затем считывает и записывает данные с помощью HID (Human Interface Device). Во время компиляции создается статическая библиотека.
   * Некоторые библиотеки необходимо найти заранее.
